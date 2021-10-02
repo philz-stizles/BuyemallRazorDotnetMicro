@@ -7,13 +7,31 @@ services:
     volumes:
         - ${WEBAPP_STORAGE_HOME}/site:/data/db
     ports:
-        - "27017:27017"
+        - "27018:27017"
+  
+  basketservice.redis:
+    container_name: basketservice.redis
+    restart: always
+    ports:
+        - "6379:6379"
 
   catalogservice.api:
+    container_name: catalogservice.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "CatalogDbSettings:ConnectionString=mongodb://catalogservice.mongo:27017"
+      - "CatalogDbSettings:ConnectionString=mongodb://catalogservice.mongo:27018"
     depends_on:
       - catalogservice.mongo
     ports:
       - "8000:80"
+
+  basketservice.api:
+    container_name: basketservice.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:Redis=basketservice.redis:6379"
+    depends_on:
+      - basketservice.redis
+    ports:
+      - "8001:80"
+

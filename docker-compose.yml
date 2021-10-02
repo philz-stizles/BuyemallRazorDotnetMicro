@@ -4,8 +4,18 @@ services:
   catalogservice.mongo:
     image: mongo
 
+  basketservice.redis:
+    image: redis
+
   catalogservice.api:
     image: ${DOCKER_REGISTRY-}catalogserviceapi
     build:
       context: .
       dockerfile: src/CatalogService/CatalogService.API/Dockerfile
+
+  basketservice.api:
+    image: ${DOCKER_REGISTRY-}basketserviceapi
+    build:
+      context: .
+      dockerfile: src/BasketService/BasketService.API/Dockerfile
+
