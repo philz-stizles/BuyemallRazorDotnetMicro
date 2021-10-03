@@ -23,17 +23,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscountService", "DiscountService", "{28698861-037E-4CBA-ADE4-F54E9C9B70AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.API", "src\OrderService\OrderService.API\OrderService.API.csproj", "{D8554716-31AB-4665-BB3E-591D68718BB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.API", "src\OrderService\OrderService.API\OrderService.API.csproj", "{D8554716-31AB-4665-BB3E-591D68718BB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application", "src\OrderService\OrderService.Application\OrderService.Application.csproj", "{5B652FA7-8830-4F8F-95C2-F1A28066CB8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Application", "src\OrderService\OrderService.Application\OrderService.Application.csproj", "{5B652FA7-8830-4F8F-95C2-F1A28066CB8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Infrastructure", "src\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{BE25B322-F07F-4FE5-B71D-9D0AC4B30C9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Infrastructure", "src\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{BE25B322-F07F-4FE5-B71D-9D0AC4B30C9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Core", "src\OrderService\OrderService.Core\OrderService.Core.csproj", "{A02B58C6-791B-46D1-B50F-B7C1700403CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Core", "src\OrderService\OrderService.Core\OrderService.Core.csproj", "{A02B58C6-791B-46D1-B50F-B7C1700403CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{B16798DC-70D5-4C9F-A5A8-462E18A802E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Web", "src\WebApp\WebApp.Web\WebApp.Web.csproj", "{18DC7F07-AFFE-48D4-BB8A-EF88CDDE4050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Web", "src\WebApp\WebApp.Web\WebApp.Web.csproj", "{18DC7F07-AFFE-48D4-BB8A-EF88CDDE4050}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{CDAEE47E-1ECE-4535-AF32-4C7155A561FC}"
 EndProject
