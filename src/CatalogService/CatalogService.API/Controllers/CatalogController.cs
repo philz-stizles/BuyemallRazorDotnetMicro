@@ -19,7 +19,7 @@ namespace CatalogService.API.Controllers
         public CatalogController(ILogger<CatalogController> logger, IProductRepository productRepository)
         {
             _logger = logger;
-            _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository)); ;
+            _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
         }
 
         [HttpGet]

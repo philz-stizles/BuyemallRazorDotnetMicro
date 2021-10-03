@@ -46,6 +46,17 @@ Manage Redis docker container:
 
 ```
 
+## RabbitMQ
+
+Running a Redis docker container:
+
+```bash
+  docker run -d -p 15672:15672 -p 5672:5672 --hostname my-rabbitmq  --name ecommerce-rabbitmq rabbitmq:3-management
+```
+
+username: guest
+password: guest
+
 ## Docker
 
 Run compose:

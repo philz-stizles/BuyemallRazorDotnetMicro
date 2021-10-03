@@ -14,6 +14,13 @@ services:
     restart: always
     ports:
         - "6379:6379"
+  
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+        - "5672:5672"
+        - "15672:15672"
 
   catalogservice.api:
     container_name: catalogservice.api
@@ -22,6 +29,9 @@ services:
       - "CatalogDbSettings:ConnectionString=mongodb://catalogservice.mongo:27018"
     depends_on:
       - catalogservice.mongo
+    volumes:
+      - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+      - ${HOME}/.aspnet/https:/root/.aspnet/https/
     ports:
       - "8000:80"
 
@@ -30,8 +40,13 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:Redis=basketservice.redis:6379"
+      - "EventBus:HostName=rabbitmq"
     depends_on:
       - basketservice.redis
+      - rabbitmq
+    volumes:
+      - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+      - ${HOME}/.aspnet/https:/root/.aspnet/https/
     ports:
       - "8001:80"
 
