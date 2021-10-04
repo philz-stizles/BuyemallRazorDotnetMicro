@@ -22,3 +22,10 @@ services:
       context: .
       dockerfile: src/BasketService/BasketService.API/Dockerfile
 
+
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/OcelotApiGateway/Dockerfile
+

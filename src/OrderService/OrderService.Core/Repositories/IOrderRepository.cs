@@ -7,6 +7,6 @@ namespace OrderService.Core.Repositories
 {
     public interface IOrderRepository: IRepository<Order>
     {
-        Task<IEnumerable<Order>> GetOrdersByUsername(string username);
+        Task<IEnumerable<Order>> GetOrdersByUserName(string username);
     }
 }

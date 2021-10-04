@@ -6,8 +6,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using OrderService.API.RabbitMQ;
 using OrderService.Core.Repositories;
 using OrderService.Core.Repositories.Base;
+using OrderService.Infrastructure.Data;
+using OrderService.Infrastructure.Repositories;
+using OrderService.Infrastructure.Repositories.Base;
 using RabbitMQ.Client;
 
 namespace OrderService.API
@@ -58,7 +62,7 @@ namespace OrderService.API
                 return new RabbitMQConnection(factory);
             });
 
-            // services.AddSingleton<EventBusRabbitMQConsumer>();
+            services.AddSingleton<EventBusRabbitMQConsumer>();
 
             services.AddControllers();
         }
